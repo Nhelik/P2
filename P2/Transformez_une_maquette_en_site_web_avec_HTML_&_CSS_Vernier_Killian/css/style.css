@@ -8,6 +8,11 @@ body {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /*______header______*/
 
 header {
@@ -33,10 +38,9 @@ nav {
 
 nav #accommodation a,
 nav #activities a {
-  text-decoration: none;
-  color: black;
   padding: 42px 20px 0px 20px;
   margin-right: 20px;
+  border-top: white solid 3px;
 }
 
 #accommodation a:focus,
@@ -44,7 +48,7 @@ nav #activities a {
 #accommodation a:hover,
 #activities a:hover {
   color: #0065fc;
-  border-top: #0065fc solid 3px;
+  border-top-color: #0065fc;
 }
 
 /*______research______*/
@@ -61,11 +65,7 @@ nav #activities a {
 
 /*______Form______*/
 
-#glass {
-  display: none;
-}
-
-#form input,
+input,
 button {
   border: none;
 }
@@ -78,7 +78,11 @@ form input:focus {
   outline: none;
 }
 
-#form {
+button {
+  background: none;
+}
+
+form {
   display: flex;
   width: 359px;
   height: 43px;
@@ -90,36 +94,37 @@ form input:focus {
 #location {
   background-color: #f2f2f2;
   height: 43px;
-  width: 40px;
-  min-width: 40px;
-  position: relative;
-}
-#location i {
-  position: absolute;
-  left: 14px;
-  top: 13px;
+  width: 43px;
+  min-width: 43px;
+  padding-left: 15px;
+  padding-top: 13px;
 }
 
-#search-input {
+input {
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
   height: 43px;
   width: 199px;
-}
-
-#search-input input {
   font-weight: bold;
   line-height: 40px;
   padding-left: 10px;
 }
 
-#button button {
+.label-icon {
+  display: none;
+}
+
+.label-search {
+  display: inline-block;
   color: white;
   background-color: #0065fc;
-  height: 43px;
-  width: 120px;
   font-weight: bold;
   cursor: pointer;
+  height: 43px;
+  width: 120px;
+  margin-left: -5px;
+  line-height: 42.5px;
+  padding-right: 5px;
 }
 
 /*______Filters______*/
@@ -205,13 +210,13 @@ form input:focus {
   display: flex;
 }
 
-#info-icon i {
-  font-size: 12px;
+#info i {
+  font-size: 11px;
   border: 1px solid #f2f2f2;
   border-radius: 30px;
   width: 18px;
-  height: 18px;
-  padding-left: 5.7px;
+  height: 19px;
+  padding-left: 6px;
   padding-top: 2px;
   color: #0065fc;
   margin-top: 13px;
@@ -460,11 +465,15 @@ footer {
   width: 100%;
   background-color: #f2f2f2;
   font-size: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   margin-top: 70px;
 }
 
-#footer-boxes {
+footer h3 {
+  margin: 60px 0px 25px 40px;
+}
+
+footer > div {
   width: 75%;
   display: flex;
   justify-content: space-between;
@@ -479,28 +488,6 @@ footer li {
 }
 
 /*______Responsive______*/
-
-/* Small Desktop */
-
-/* @media screen and (min-width: 993px) and (max-width: 1117px) {
-  main,
-  .research {
-    width: 97%;
-  }
-
-  #marseille-accommodation-wrap,
-  #popular-wrap {
-    padding: 15px;
-  }
-
-  .content {
-    grid-column-gap: 15px;
-  }
-
-  #accommodation-boxes {
-    grid-gap: 15px;
-  }
-} */
 
 /*TABLET*/
 
@@ -572,7 +559,7 @@ footer li {
 
   /*Footer*/
 
-  #footer-boxes {
+  footer > div {
     width: 90%;
   }
 }
@@ -612,15 +599,15 @@ footer li {
     padding-bottom: 15px;
     margin-right: 0px;
     border-bottom: #f2f2f2 solid 3px;
+    border-top: none;
   }
 
   #accommodation a:focus,
   #activities a:focus,
   #accommodation a:hover,
   #activities a:hover {
-    border-top: none;
     color: #0065fc;
-    border-bottom: #0065fc solid 3px;
+    border-bottom-color: #0065fc;
   }
 
   /*Research*/
@@ -634,55 +621,42 @@ footer li {
 
   /*form*/
 
-  #form {
+  form {
     margin: auto;
     margin-top: 35px;
-    width: 347.75px;
-    height: 55px;
+    width: 377.75px;
+    height: 53px;
   }
 
   #location {
-    height: 55px;
-    width: 55px;
+    height: 53px;
+    width: 53px;
+    font-size: 18px;
+    padding-top: 17px;
+    padding-left: 20px;
   }
 
-  #location i {
-    font-size: 21px;
-    left: 21px;
-    top: 17px;
-  }
-
-  #search-input {
-    width: 243.75px;
-    height: 55px;
+  input {
+    width: 247.75px;
+    height: 53px;
     border-width: 2px;
-  }
-
-  #search-input input {
-    height: 51px;
     font-size: 19px;
   }
 
-  #button {
+  .label-search {
     display: none;
   }
 
-  #glass {
+  .label-icon {
     display: block;
+    position: relative;
     color: white;
     background-color: #0065fc;
-    height: 55px;
-    width: 56px;
+    height: 53px;
+    width: 52px;
     border-radius: 15px 15px 15px 15px;
-    position: relative;
-    right: 19px;
-  }
-
-  #glass i {
-    position: absolute;
-    font-size: 18px;
-    top: 18.5px;
-    left: 17.5px;
+    padding-top: 18px;
+    right: 25px;
   }
 
   /*filters*/
@@ -698,14 +672,20 @@ footer li {
 
   #filters > div {
     margin-right: 8px;
+    margin-top: -5px;
   }
 
   #info p {
     font-size: 16px;
   }
 
-  #info-icon i {
-    margin-top: 15px;
+  #info i {
+    margin-top: 12.5px;
+    padding-left: 7.5px;
+    padding-top: 2.71px;
+    min-width: 23px;
+    min-height: 23px;
+    border-width: 2px;
   }
 
   /*main*/
@@ -798,15 +778,19 @@ footer li {
   /*Footer*/
 
   footer {
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
-  #footer-boxes {
+  footer > div {
     flex-direction: column;
     font-size: 16px;
   }
 
-  #footer-boxes ul {
+  footer ul {
     padding-left: 30px;
+  }
+
+  footer h3 {
+    margin: 40px 0px 25px 30px;
   }
 }

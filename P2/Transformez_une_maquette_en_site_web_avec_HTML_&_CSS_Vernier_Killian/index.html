@@ -22,7 +22,9 @@
   <body>
     <!-- HEADER -->
     <header>
-      <img src="images/logo/Booki.png" alt="" />
+      <a href="#">
+        <img src="images/logo/Booki.png" alt="" />
+      </a>
       <nav>
         <div id="accommodation">
           <a href="#accommodation-link">Hébergements</a>
@@ -39,26 +41,22 @@
       <h1>Trouver votre hébergement pour des vacances de rêve</h1>
       <p>En plein centre ville ou en pleine nature</p>
 
-      <div id="form">
-        <div id="location">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <div id="search-input">
-          <form method="post">
-            <input
-              type="search"
-              value="Marseille, France"
-              placeholder="Saisissez un lieu"
-            />
-          </form>
-        </div>
-        <div id="button">
-          <button>Rechercher</button>
-        </div>
-        <div id="glass">
-          <i id="glass-icon" class="fa-solid fa-magnifying-glass"></i>
-        </div>
-      </div>
+      <form method="post">
+        <i id="location" class="fa-solid fa-location-dot"></i>
+
+        <input
+          type="search"
+          value="Marseille, France"
+          placeholder="Saisissez un lieu"
+        />
+
+        <button>
+          <span class="label-search">Rechercher</span>
+          <span class="label-icon"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+        </button>
+      </form>
 
       <!-- Filters -->
       <div id="filters-wrapper">
@@ -91,9 +89,7 @@
         </div>
       </div>
       <div id="info">
-        <div id="info-icon">
-          <i class="fa-solid fa-info"></i>
-        </div>
+        <i class="fa-solid fa-info"></i>
         <p>Plus de 500 logements sont disponibles dans cette ville</p>
       </div>
     </section>
@@ -320,23 +316,29 @@
 
     <!-- FOOTER -->
     <footer>
-      <div id="footer-boxes">
-        <ul>
-          <li><h3>A propos</h3></li>
-          <li>Fonctionnement du site</li>
-          <li>Conditions générales de vente</li>
-          <li>Donneés et confidentialité</li>
-        </ul>
-        <ul>
-          <li><h3>Nos hébergements</h3></li>
-          <li>Charte qualité</li>
-          <li>Soumettre votre hôtel</li>
-        </ul>
-        <ul>
-          <li><h3>Assistance</h3></li>
-          <li>Centre d'aide</li>
-          <li>Nous contacter</li>
-        </ul>
+      <div>
+        <div>
+          <h3>A propos</h3>
+          <ul>
+            <li><a href="#">Fonctionnement du site</a></li>
+            <li><a href="#">Conditions générales de vente</a></li>
+            <li><a href="#">Donneés et confidentialité</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Nos hébergements</h3>
+          <ul>
+            <li><a href="#">Charte qualité</a></li>
+            <li><a href="#">Soumettre votre hôtel</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Assistance</h3>
+          <ul>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
